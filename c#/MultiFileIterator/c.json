@@ -1,0 +1,32 @@
+    {
+        "$schema": "http://schema.express.azure.com/schemas/2015-01-01-alpha/RolloutSpec.json",
+        "contentVersion": "1.0.0.0",
+        "RolloutMetadata": {
+            "ServiceModelPath": "ServiceModels\\TestIslandClusterDev.ServiceModel.json",
+            "ScopeBindingsPath": "ScopeBindings.json",
+            "Name": "CSC-sampleworkloadapi-IslandCluster-Dev",
+            "RolloutType": "Minor",
+            "BuildSource": {
+                "Parameters": {
+                    "ServiceGroupRoot": "ServiceGroupRoot",
+                    "VersionFile": "BuildVer.txt"
+                }
+            },
+            "Notification": {
+                "Email": {
+                    "To": "coreservices-notify@microsoft.com"
+                }
+            }
+        },
+        "OrchestratedSteps": [
+                {
+                    "Name": "DeploymentItemRollout-TestIslandClusterUSDevWUSMTSales1",
+                    "TargetName": "AppDeployment-TestIslandClusterUSDevWUSMTSales1",
+                    "TargetType": "ServiceResource",
+                    "Actions": [
+                        "Extension/TestILUSDevWUSMTSales1"
+                    ]
+                }
+        ]
+    }
+
