@@ -6,7 +6,12 @@
 *.exe
 *.o
 *.so
+
+# vs and copilot related
 CopilotIndexes
+.vs/
+bin/
+obj/
 
 # Packages #
 ############
