@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>net462</TargetFramework>
+        <RuntimeIdentifier>win7-x64</RuntimeIdentifier>
+        <RunCodeAnalysis>false</RunCodeAnalysis>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\Analyzer\Analyzer.csproj" >
+            <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+            <OutputItemType>analyzer</OutputItemType>
+        </ProjectReference>
+    </ItemGroup>
+</Project>
